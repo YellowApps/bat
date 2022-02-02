@@ -5,7 +5,7 @@ cd %~dp0
 title Mine Sweater :3 (Score: 0)
 chcp 65001 > nul
 setlocal EnableDelayedExpansion
-mode con: cols=50 lines=17
+mode con cols=50 lines=17
 
 ::открываем меню
 call :menu
