@@ -1,0 +1,12 @@
+WriteLn=echo
+ReadLn=set /p
+Load=call
+Execute=start
+Stop=pause
+Delay=timeout /nobreak /t
+Null=NUL
+Console=CON
+Printer=PRN
+var=set
+_:%
+\:^

@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="generator" content="YML">
+		<meta name="ymlversion" content="1.0">
+		<title>YML</title>
+	</head>
+	<body>

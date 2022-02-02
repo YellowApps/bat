@@ -1,0 +1,8 @@
+@echo off
+chcp 65001
+title 
+setlocal EnableDelayedExpansion
+rem ***
+rem Made with YPLM
+rem ***
+
