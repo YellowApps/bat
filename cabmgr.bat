@@ -89,6 +89,19 @@ if "%cmd%"=="help" (
 	) else (
 		call :echo "Ошибка создания архива. Код: %errorlevel%"
 	)
+) else if "%cmd%"=="update" (
+	pushd "%~dp0"
+	curl "https://raw.githubusercontent.com/yellowapps/bat/main/cabmgr.bat" -o "cabmgr.bat.new" > nul 2> nul
+	if not "%errorlevel%"=="0" (
+		call :echo "Не удалось скачать обновление."
+		call :echo "Скачайте его вручную по ссылке: https://raw.githubusercontent.com/yellowapps/bat/main/cabmgr.bat"
+		echo https://raw.githubusercontent.com/yellowapps/bat/main/cabmgr.bat | clip
+		call :echo "Ссылка скопирована!"
+		exit /b
+	)
+	ren cabmgr.bat cabmgr.bat.old
+	ren cabmgr.bat.new cabmgr.bat
+	popd
 ) else (
 	call :echo "Использование: CABMGR [/Q] [/N] [/T] HELP/EXTRACT/CREATE cabfile folder"
 )
