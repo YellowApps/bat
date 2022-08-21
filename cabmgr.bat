@@ -101,6 +101,7 @@ if "%cmd%"=="help" (
 	)
 	ren cabmgr.bat cabmgr.bat.old
 	ren cabmgr.bat.new cabmgr.bat
+	if "%errorlevel%"=="0" ( call :echo "CAB Manager успешно обновлён." )
 	popd
 ) else (
 	call :echo "Использование: CABMGR [/Q] [/N] [/T] HELP/EXTRACT/CREATE cabfile folder"
