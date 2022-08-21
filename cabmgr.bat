@@ -28,7 +28,7 @@ if not "%nologo%"=="1" (
 if "%cmd%"=="help" (
 	call :echo "Справка по CAB Manager"
 	call :echo "."
-	call :echo "CABMGR [/Q] [/N] [/T] HELP/EXTRACT/CREATE cabfile folder"
+	call :echo "CABMGR [/Q] [/N] [/T] HELP/EXTRACT/CREATE/UPDATE cabfile folder"
 	call :echo "."
 	call :echo "/Q        Отключает вывод текста в консоль."
 	call :echo "/N        Отключает вывод сообщения о версии CAB Manager."
@@ -36,6 +36,7 @@ if "%cmd%"=="help" (
 	call :echo "HELP      Показывает этот текст."
 	call :echo "EXTRACT   Распаковывает CAB-архив cabfile в папку folder."
 	call :echo "CREATE    Создает CAB-архив cabfile из файлов в папке folder."
+	call :echo "UPDATE    Обновляет CAB Manager."
 ) else if "%cmd%"=="extract" (
 	if "%1"=="" (
 		call :echo "ОШИБКА: Параметры не заданы"
@@ -104,7 +105,7 @@ if "%cmd%"=="help" (
 	if "%errorlevel%"=="0" ( call :echo "CAB Manager успешно обновлён." )
 	popd
 ) else (
-	call :echo "Использование: CABMGR [/Q] [/N] [/T] HELP/EXTRACT/CREATE cabfile folder"
+	call :echo "Использование: CABMGR [/Q] [/N] [/T] HELP/EXTRACT/CREATE/UPDATE cabfile folder"
 )
 
 exit /b 0
